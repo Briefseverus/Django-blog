@@ -1,0 +1,83 @@
+{% extends "pages/base.html" %}
+ {% load static %}
+{% block title %}
+BRIEFSEVERUS
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1"> My Journey as a Third-Year Student and My Passion for Java</h1>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2">Posted on January 1, 2023 by Briefseverus</div>
+                            <!-- Post categories-->
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">Developer</a>
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">Blogger</a>
+                        </header>
+                        <!-- Preview image figure-->
+<figure class="mb-4"><img class="img-fluid rounded" src="{% static 'images/1.PNG' %}" alt="..." /></figure>
+                        <!-- Post content-->
+                        <section class="mb-5">
+                            <p class="fs-5 mb-4">As a third-year student, I have completed several projects in my journey as a computer science major. With a focus on Java and Python, I have developed several projects that have helped me grow my skills and knowledge.</p>
+                            <p class="fs-5 mb-4">I have always been passionate about Java programming and I believe it is a powerful language that has a lot of potential. I have completed several projects using Java, including a web application that tracks stocks and a desktop application for managing contacts. I have also worked on a few Python projects, such as a machine learning program that identifies handwritten digits and a simple web scraper.</p>
+                            <p class="fs-5 mb-4">In addition to these languages, I have also been experimenting with Flutter, which is a powerful framework for building beautiful and fast apps for mobile, web, and desktop. I am excited to continue exploring Flutter and its capabilities.</p>
+                            <h2 class="fw-bolder mb-4 mt-5">Every day, I make an effort to acquire new knowledge.</h2>
+                            <p class="fs-5 mb-4">As a student, I have learned a lot about the importance of teamwork, communication, and time management. Working on group projects has taught me how to collaborate effectively with others and communicate ideas clearly. Time management has also been crucial, as I balance my coursework, extracurricular activities, and personal projects.</p>
+                            <p class="fs-5 mb-4">My ultimate goal is to become a back-end Java developer. I believe that Java is a powerful language that can be used to develop complex, robust, and scalable applications. With my passion for Java and my experiences as a student, I am confident that I can achieve this goal.
+
+I look forward to continuing my journey and exploring new technologies and projects. Stay tuned for updates on my progress and new projects!</p>
+                        </section>
+                                                    <h2 class="fw-bolder mb-4 mt-5">Active Participation in Small Project Programs: My Passion for Contributing to Collaborative Endeavors</h2>
+
+                        <figure class="mb-4"><img class="img-fluid rounded" src="{% static 'images/2.PNG' %}" alt="..." /></figure>
+                        <!-- Post content-->
+                        <section class="mb-5">
+                            <p class="fs-5 mb-4">After 8 days, the gPBL program in Danang has finally come to an end. Despite differences in language and culture, the teams cooperated very well to complete their projects, ranging from a theft alert system and smart home to an IoT-based agricultural system.
+
+This was an incredibly rewarding and memorable experience, exchanging knowledge and learning from Taiwanese and Japanese students who are all outstanding, friendly, and sociable. Hopefully, we will have the opportunity to meet again in the near future.
+
+Lastly, I would like to express my gratitude to the teachers, professors, TAs, and everyone who made this program possible.
+
+Thank you and goodbye gPBL2023! #GPBL2023</p>
+
+                        </section>
+                    </article>
+
+                </div>
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+                    <!-- Search widget-->
+
+                    <!-- Categories widget-->
+                    <div class="card mb-4">
+                        <div class="card-header"> Projects Category</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                          {% for pro in Pro %}
+                                        <li><a href="/projects">{{pro.title}}</a></li>
+                                         {% endfor %}
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Side widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Sumary line</div>
+                        <div class="card-body">Hi there, everybody call me Brian. This is my fisrt blog. I am passionate about Java programming, automation, and data analysis. I have honed my skills through various internships, including one at Nine Plus Solution, where I focused on Java development. I am excited to continue growing in the field of IT and am open to new opportunities that will challenge and develop my abilities.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+{% endblock %}

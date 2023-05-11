@@ -1,0 +1,39 @@
+{% extends "pages/base.html" %}
+ {% load static %}
+{% block title %}{% endblock %}
+{% block content %}
+<div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1"> {{Pro.title}}</h1>
+            <div class="text-muted fst-italic mb-2">Posted on {{Pro.date}} by Briefseverus</div>
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">{{Pro.language}}</a>
+
+                        </header>
+                        <!-- Preview image figure-->
+                        <figure class="mb-4"><img class="img-fluid rounded" src="{{Pro.imgLink}}" alt="..." /></figure>
+                        <!-- Post content-->
+                        <section class="mb-5">
+                            <p class="fs-5 mb-4">{{Pro.body}}</p>
+                            <p class="fs-5 mb-4"><a href="{{Pro.link}}">Link source</a></p>
+                        </section>
+                    </article>
+
+                </div>
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+
+                    <div class="card mb-4">
+                        <div class="card-header">Sumary line</div>
+                        <div class="card-body">Hi there, everybody call me Brian. This is my fisrt blog. I am passionate about Java programming, automation, and data analysis. I have honed my skills through various internships, including one at Nine Plus Solution, where I focused on Java development. I am excited to continue growing in the field of IT and am open to new opportunities that will challenge and develop my abilities.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
